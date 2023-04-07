@@ -13,5 +13,10 @@ pipeline {
                 echo 'Finish building the project'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'mvn verify'
+            }
+        }
     }
 }
